@@ -11,12 +11,12 @@
     <div class="inloggCont">
         <h1>RPG Spill</h1>
         <h4>Registrer en bruker</h4>
-        <form action="">
+        <form method="post">
             <input type="text" placeholder="Brukernavn" class="inloggingInput" name="brukernavn"><br>
             <input type="text" placeholder="Passord" class="inloggingInput" name="passord"><br>
-            <input type="submit" class="inloggingInput" value="Registrer"><br>
+            <input type="submit" class="inloggingInput" value="Registrer" name="submit"><br>
         </form>
-        <a href="index.html">Klikk her for å logge deg in.</a>
+        <a href="index.html">Klikk her for å logge deg in123.</a>
 
 
         <?php
@@ -27,31 +27,28 @@
 				$passord = $_POST['passord'];
 
 				
-                //Koble til databasen 
-                $dbc = mysqli_connect('localhost', 'root', '', 'rpgdb2')
-                or die('error connecting to MySQL server');
+				//Opprette kobling
+				$kobling = new mysqli('localhost', 'root', '', 'rpgdb2');
+				
+				//Sjekk om kobling virker
+				if ($kobling->connect_error) {
+					die("Noe gikk galt: " . $kobling->connect_error);
+				}
+
+				//Angi UTF-8 som tegnsett
+				$kobling->set_charset("utf8");
+
 
 				//Gjøre klar SQL-strengen
-				$query = "INSERT INTO brukere VALUES ('$brukernavn','$passord')";
-
-
-				//Utføre spørringen
-				$result = mysqli_query($dbc, $query)
-				or die('Error querying database.');
-
-				
-				//Koble fra databasen
-				mysqli_close($dbc);
-                
-				//Sjekke om spørringen gir resultater
-				if($result){
-					//Gyldig login
-					echo "Takk for at du lagde bruker!";
-
-				}else{
-					//Ugyldig login
-					echo "Feil brukernavn eller passord";
+				$sql = "INSERT INTO brukere VALUES ('$brukernavn','$passord')";
+              
+				if ($kobling->query($sql)) {
+					echo "bruker lagt til"; // Oppdaterer siden så de nye resultatene blir vist
+				} else {
+					echo "Noe gikk galt med spørringen $sql ($kobling->error).";
 				}
+
+				$kobling -> close();
 			}
 		?>
 

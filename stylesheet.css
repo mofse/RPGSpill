@@ -1,0 +1,150 @@
+/*Inlogging*/
+
+.inloggCont{
+    width: 40%;
+    height: 300px;
+    padding: 10px;
+
+    margin: auto;
+    border: 5px solid white;
+    color: orange;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.inlogging{
+    width: min-content;
+}
+
+
+/*UI*/
+html{
+    background-color: black;
+}
+
+.UI{
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 200px;
+    background-color: rgb(0, 10, 6);
+}
+.UI_box{
+    border: 2px double white;
+    height: auto;
+    transition: 0.5s;
+    flex: 1;
+}
+
+#textbox{
+    transition: 0,4s;
+    font-size: larger;
+    padding: 20px;
+    text-align: center;
+    color: wheat;
+    background-color: rgb(41, 41, 41);
+    border-radius: 10px;
+}
+
+
+/*bars*/
+
+
+.barBox{
+    display: none;
+    width: 50%;
+    height: 20px;
+    background-color: rgb(48, 48, 48);
+    border: 2px double white;
+}
+#hpBar{
+    background-color: red;
+    width: 100%;
+    transition: 2s;
+    transition-timing-function: ease-out;
+}
+
+
+/*ChoiseBoxes*/
+
+
+.choiceDiv{
+    border: 1px solid orange;
+}
+.choiceDiv:hover{
+    background-color: orange;
+}
+
+
+/*Fighting*/
+.enemyBox{
+    display: flex;
+    width: 50%;
+    height: 20px;
+    background-color: rgb(48, 48, 48);
+    border: 2px double white;    
+}
+.enemyHP{
+    background-color: purple;
+    width: 100%;
+    transition: 2s;
+    transition-timing-function: ease-out;
+}
+
+
+/*Inventar*/
+.desctext {
+    font-style: italic;
+    font-size: small;
+    color: lightpink;
+}
+
+/*----------SNAKE----------*/
+#overskrift{
+    width: fit-content;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    animation: overskriftFun 20s infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+#snake_container{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto auto auto auto auto;
+    background-color: gray;
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+    margin-bottom: 5px;
+    transition: 0.5s;
+    box-shadow: 4px 4px 4px black;
+
+}
+.snake_grid{
+    background-color: lightgray;
+    border: 5px solid black;
+    transition: 0.2s;
+    box-shadow: 1px 1px 2px black;
+}
+.snake_grid:hover{
+    border-style: double;
+}
+#buttons{
+    display: flex;
+    flex-flow: row;
+}
+.nav_btn{
+    padding: 1px;
+    margin-right: 4px;
+    width: fit-content;
+    border: 2px solid black;
+}
+.nav_btn:active{
+    border-style: double;
+}

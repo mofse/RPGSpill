@@ -1,4 +1,4 @@
-# RPGSpill
+# RPG project
 Project Kuben VGS
 Last update 12.12.2022
 

@@ -40,16 +40,23 @@ html{
     flex: 1;
 }
 
-#textbox{
-    transition: 0,4s;
-    font-size: larger;
-    padding: 20px;
-    text-align: center;
-    color: wheat;
+#UI1{
     background-color: rgb(41, 41, 41);
+    text-align: center;
     border-radius: 10px;
 }
 
+#textbox{
+    padding: 20px;
+    transition: 0,4s;
+    font-size: larger;
+    color: wheat;
+}
+.ui_overskrift{
+    text-align: center;
+    border-bottom: 4px double black;
+    background-color: darkorange;
+}
 
 /*bars*/
 
@@ -63,6 +70,12 @@ html{
 }
 #hpBar{
     background-color: red;
+    width: 100%;
+    transition: 2s;
+    transition-timing-function: ease-out;
+}
+#manabar{
+    background-color: darkblue;
     width: 100%;
     transition: 2s;
     transition-timing-function: ease-out;
@@ -97,7 +110,7 @@ html{
 
 
 /*Inventar*/
-.desctext {
+#desctext {
     font-style: italic;
     font-size: small;
     color: lightpink;

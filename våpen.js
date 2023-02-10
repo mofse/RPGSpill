@@ -16,4 +16,4 @@ var items = [basicSword];
 
 var inventory = [];
 inventory.push(basicSword);
-console.log(items);
+console.log("items = " + items);

@@ -16,19 +16,16 @@
             <input type="text" placeholder="Passord" class="inloggingInput" name="passord"><br>
             <input type="submit" class="inloggingInput" value="Registrer" name="submit"><br>
         </form>
-        <a href="index.html">Klikk her for å logge deg in123.</a>
+        <a href="index.php">Klikk her for å logge deg in123.</a>
 
 
         <?php
+		include_once 'config.php';
 			if(isset($_POST['submit'])){
 				
 				//Gjøre om POST-data til variabler
 				$brukernavn = $_POST['brukernavn'];
 				$passord = $_POST['passord'];
-
-				
-				//Opprette kobling
-				$kobling = new mysqli('localhost', 'root', '', 'rpgdb2');
 				
 				//Sjekk om kobling virker
 				if ($kobling->connect_error) {

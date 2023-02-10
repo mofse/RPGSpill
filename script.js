@@ -1,17 +1,20 @@
+console.log("hallo?");
 /*---------------UI funksjoner---------------*/
-
-function endreHp(nyHP){
+function endreHp(nyHP, hpboxNavn){
     if(nyHP > HP){
-        document.getElementById('hpBar').style.transition = "0.5s";
+        document.getElementById(hpboxNavn).style.transition = "0.5s";
         nyHP = HP;
         HP = HP - nyHP;
     } else{
         HP = HP - nyHP;
     }
-    document.getElementById('hpBar').style.width = HP + "%";
+    document.getElementById(hpboxNavn).style.width = HP + "%";
 }
 function itemDesc(itemid) {
-    document.getElementById("desctext").innerHTML = itemid.navn;
+    document.getElementById("desctext").innerHTML = itemid.desc;
+}
+function clearitemDesc(e) {
+    document.getElementById("desctext").innerHTML = "";
 }
 
 
@@ -159,24 +162,25 @@ function playStage() {
         } else if (stagePart == 3){
             stage3();
             stagePart += +1;
-        }
+        } 
 
-    }
+    } 
 }
 /*--------------Battle Funksjoner--------------*/
 
 
 
 function startBattle(enemies, enemyname1, enemyname2, enemyname3, enemyname4){
-    battleActive = 1;
     document.getElementById("textbox").innerHTML = "";
+    console.log("StartBattle"); 
     for (i = 0; i < enemies; i++) {
         document.getElementById("fightBox").innerHTML += '<div class="enemyBox" id="enemyBox' + (i+1) + '"><div class="enemyHP" id="enemyHP' + (i+1) + '"></div></div>';
     } 
     for (i = 0; i < items.length; i++) {
+        console.log(items);
         var itemnamesaver = "";
         itemnamesaver = items[i];
-        document.getElementById("inventoryBox").innerHTML += '<div class="inventoryItem" id="'+ itemnamesaver.navn + '" onmouseenter="itemDesc(' + itemnamesaver + ')" onmouseleave="itemDesc(' + itemnamesaver + ')>BigOlStake</div>';
+        document.getElementById("inventoryBox").innerHTML += '<div class="inventoryItem" id="'+ itemnamesaver.navn + '" onmouseenter="itemDesc(' + itemnamesaver + ')" onmouseleave="itemDesc(' + itemnamesaver + ')>' + itemnamesaver.navn + '</div>';
     }
     document.getElementById("hpBox").style.display = "flex";
     document.getElementById("manaBox").style.display = "flex";
@@ -186,7 +190,9 @@ function startBattle(enemies, enemyname1, enemyname2, enemyname3, enemyname4){
     fiendeNr2 = enemyname2;
     fiendeNr3 = enemyname3;
     fiendeNr4 = enemyname4;
-    lesTekst("Kampen Begyner");
+    var fiender = [fiendeNr1, fiendeNr2, fiendeNr3, fiendeNr4];
+    battleActive = 1;
+    lesTekst(kampStarttxt);
     /*Mer om fighten ligger under funksjonen onscreenclicked. battleActive funksjonen hinder progress i spillet*/
 }
 
@@ -202,12 +208,12 @@ function battleTurn() {
 
     if (enemyCount == 0) {
 
-        lesTekst(kampSlutttxt);
-        battleActive = 0;
         document.getElementById("fightBox").innerHTML = "";
+        battleActive = 0;
+        lesTekst(kampSlutttxt);
 
     } else if (battlePlayertur == 1) {
-
+        fightOptions();
         console.log("Spiller Tur");
         battlePlayertur = 0;
         battleMostertur = enemyCount;
@@ -220,7 +226,7 @@ function battleTurn() {
             battleMostertur--;
         } else if (battleMostertur == 0) {
             battlePlayertur = 1;
-            console.log("Monster Tur over");
+            console.log("monster Tur over");
         }
 
     } else {
@@ -231,6 +237,9 @@ function battleTurn() {
 
     
 
+}
+function fightOptions() {
+    document.getElementById("typebox").innerHTML += '<div class="choiceDiv" onclick="">Kjemp</div><div class="choiceDiv" onclick="">Items</div>';
 }
 
 
@@ -268,7 +277,7 @@ function doTutorial0(theChoice) {
 
 function doTutorial1() {
     document.getElementById("typebox").innerHTML = "";
-    document.getElementById("textbox").style.border = "5px solid blue";
+    document.getElementById("displayWindow").style.border = "5px solid blue";
     lesTekst(tutorial1txt);
     stageClear++;
     tutorialPart++;
@@ -279,7 +288,7 @@ function doTutorial1() {
 
 function doTutorial2() {
     document.getElementById("textbox").innerHTML = "";
-    document.getElementById("textbox").style.border = "1px solid white";
+    document.getElementById("displayWindow").style.border = "2px double white";
     document.getElementById("UIStats").style.border = "5px solid blue";
     document.getElementById("fightBox").style.border = "5px solid blue";
     document.getElementById("typebox").innerHTML = "";

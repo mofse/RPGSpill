@@ -1,3 +1,7 @@
+
+
+
+/*Fiende statistikk*/
 var EnemyDefault = {
     EnemyName:"Undefined",
     EnemyHP:100, 

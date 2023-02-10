@@ -16,12 +16,12 @@ var tutorial4txt = "La oss prøve å bekjempe en fiende.";
 
 /*Battles*/
 
-var kampStarttxt = "[Kampen begyner]";
+var kampStarttxt = "[Kampen begynner]";
 var kampSlutttxt = "Du vant";
 var dødtxt = "Game Over";
 
 
 /*TXT Level 1*/
-var level1txt1 = "Set er stille... Vinden rusler over blomster enger, og solen lyser ned på deg blant hvite skyer. Du reiser deg sakte.";
+var level1txt1 = "Det er stille... Vinden rusler over blomster enger, og solen lyser ned på deg blant hvite skyer. Du reiser deg sakte.";
 var level1txt2 = "Ett eventyr venter deg!";
 var level1txt3 = "Fortsettelse følger";

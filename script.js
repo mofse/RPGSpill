@@ -1,4 +1,4 @@
-console.log("hallo?");
+console.log("script");
 /*---------------UI funksjoner---------------*/
 function endreHp(nyHP, hpboxNavn){
     if(nyHP > HP){

@@ -11,9 +11,13 @@
 
     <div id="UIs">
 
-
         <div class="UI" id="UI1">
             <div class="UI_box" id="displayWindow" onclick="screenClicked()">
+            <div class="FAQimgDiv">
+                <a href="faq.html">
+                    <img class="FAQimg" src="Bilder & SVG filer\FAQ.svg" height="40">
+                </a>
+            </div>
                 <div id="textbox" onclick="screenClicked()">Trykk her for å starte spillet </div>
                 <div id="desctext">BigStake</div>
             </div>

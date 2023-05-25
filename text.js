@@ -20,8 +20,16 @@ var kampStarttxt = "[Kampen begynner]";
 var kampSlutttxt = "Du vant";
 var dødtxt = "Game Over";
 
+/*startButikken*/
+
+var startbutikkentxt1 = "I ett smug på veikanten kommer du forbi noe som ser ut som en bod. Du går frem til disken."
+var startbutikkentxt2 = '"Hei på deg! Kan jeg vekke din interesse med noen varer?"'
 
 /*TXT Level 1*/
 var level1txt1 = "Det er stille... Vinden rusler over blomster enger, og solen lyser ned på deg blant hvite skyer. Du reiser deg sakte.";
 var level1txt2 = "Ett eventyr venter deg!";
 var level1txt3 = "Fortsettelse følger";
+
+
+
+var level1txt4 = "Vill du gå til butikken?";

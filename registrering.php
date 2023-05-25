@@ -13,7 +13,7 @@
         <h4>Registrer en bruker</h4>
         <form method="post">
             <input type="text" placeholder="Brukernavn" class="inloggingInput" name="brukernavn"><br>
-            <input type="text" placeholder="Passord" class="inloggingInput" name="passord"><br>
+            <input type="password" placeholder="Passord" class="inloggingInput" name="passord"><br>
             <input type="submit" class="inloggingInput" value="Registrer" name="submit"><br>
         </form>
         <a href="index.php">Klikk her for å logge deg in123.</a>

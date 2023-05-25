@@ -12,15 +12,31 @@
     <div id="UIs">
 
         <div class="UI" id="UI1">
-            <div class="UI_box" id="displayWindow" onclick="screenClicked()">
-            <div class="FAQimgDiv">
-                <a href="faq.html">
-                    <img class="FAQimg" src="Bilder & SVG filer\FAQ.svg" height="40">
-                </a>
-            </div>
+            <div id="displayWindow" class="UI_box" onclick="screenClicked()">
+            
                 <div id="textbox" onclick="screenClicked()">Trykk her for å starte spillet </div>
                 <div id="desctext">BigStake</div>
             </div>
+            
+            <div class="FAQimgDiv">
+
+                <div class="FAQimg">
+                    <img src="Bilder & SVG filer\Settings.svg" alt="Åpne instillinger" height="40">
+                </div>
+
+                <div class="FAQconthidden">
+
+                    <a href="faq.html">
+                        <img class="FAQimg" src="Bilder & SVG filer\FAQ.svg" alt="FAQ link knapp" height="40">
+                    </a>
+                    <div class="FAQimg">
+                        <img src="Bilder & SVG filer\Save.svg" alt="Lagre Spill knapp" height="40">
+                    </div>
+                
+                </div>
+
+            </div>
+
         </div>
 
 

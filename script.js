@@ -45,9 +45,12 @@ var stagePart = 1;
 var level = 1;
 var optatt = 0;
 var stageClear = 1;
+var iButtikken = 0;
 /*KUNN LEGG TIL ELLER TREKK FRA "opptatt" eller "stageClear", IKKE REDEFINER VARIABLEREN!*/
 
 
+/*Spiller Status*/ 
+var spillerPenger = 0;
 
 /*---------------Stage funskjoner---------------*/
 /*Viktige funskjoner som brukes over flere baner ligger her*/
@@ -134,9 +137,15 @@ function screenClicked() {
 }
 
 function playStage() {
+    //Denne funksjonen bestemmer (for det meste) kun hvilken bane som skal spilles, eller om en kamp tar sted.
+
     if (battleActive == 1) {
         battleTurn();
+    } 
+    else if (iButtikken = 1) {
+        if ()
     }
+
     else if (tutorialComplete == 0) {
         if (tutorialPart == 1) {
             tutorialRequest();
@@ -159,10 +168,12 @@ function playStage() {
             stage2();
             stagePart += +1;
             console.log("stagePart = " + stagePart)
-        } else if (stagePart == 3){
+        } else if (stagePart == 3) {
             stage3();
             stagePart += +1;
-        } 
+        } else if (stagePart == 4) {
+            stagePart += +1;
+        }
 
     } 
 }
@@ -320,6 +331,13 @@ function doTutorial5() {
     startBattle(2, EnemyTest, EnemyTest);
 }
 
+/*buttikken*/
+function startButikken1() {
+    document.getElementById("textbox").innerHTML = "";
+    document.getElementById("typebox").style.border = "1px solid white";
+    lesTekst(startbutikkentxt1);
+}
+
 /*Stage 1*/
 function stage1() {
     document.getElementById("textbox").innerHTML = "";
@@ -336,3 +354,9 @@ function stage3(){
     document.getElementById("hpBox").style.display = "flex";
     lesTekst(level1txt3);
 }
+
+function stage4(){
+    document.getElementById("textbox").innerHTML = "";
+    document.getElementById("typebox").innerHTML += '<div class="choiceDiv" onclick="doTutorial0(1)">Gjør Tutorial</div><div class="choiceDiv" onclick="doTutorial0(2)">Hopp over Tutorial</div>';    
+}
+

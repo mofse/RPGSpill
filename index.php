@@ -13,26 +13,23 @@
         <h4>Logg deg in her</h4>
         <form method="post" action="index.php">
             <input type="text" placeholder="Brukernavn" class="inloggingInput" name="brukernavn"><br>
-            <input type="text" placeholder="Passord" class="inloggingInput" name="passord"><br>
+            <input type="password" placeholder="Passord" class="inloggingInput" name="passord"><br>
             <input type="submit" class="inloggingInput" value="Login" name="submit"><br>
         </form>
         <a href="registrering.php">Klikk her for å registrere en bruker.</a>
+        <p>Laget av Håkon Hydle</p>
     </div>
     <?php
     include_once 'config.php';
         if(isset($_POST['submit'])){
 
-
             //Sjekk om kobling virker
             if ($kobling->connect_error) {
                 die("Noe gikk galt: " . $kobling->connect_error);
             }
-
             
             $brukernavn = $_POST['brukernavn'];
             $passord = $_POST['passord'];
-            
-
             
             $query = "SELECT brukernavn, passord from brukere where brukernavn='$brukernavn' and passord='$passord'";
 

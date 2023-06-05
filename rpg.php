@@ -73,10 +73,7 @@
             </div>
             <div class="UI_box" id="inventoryBox">
                 <div class="ui_overskrift">Inventar</div>
-                <?php
-                    echo '<div class="inventoryItem" onmouseenter="itemDesc(basicSword)" onmouseleave="clearitemDesc()">sverdEksempel</div>';
-                ?>
-                <div class="inventoryItem" onmouseenter="itemDesc(basicSword)" onmouseleave="clearitemDesc()">basicSword</div>
+                <div class="inventoryItem" onmouseenter="itemDesc(basicSword)" onmouseleave="clearitemDesc(e)">basicSword</div>
             </div>
         </div>
 

@@ -141,12 +141,10 @@ function playStage() {
 
     if (battleActive == 1) {
         battleTurn();
-    } 
-    else if (iButtikken = 1) {
-        if ()
-    }
-
-    else if (tutorialComplete == 0) {
+    } else if (iButtikken == 1) {
+        console.log("Ibuttikken bane testtest---")
+    } else if (tutorialComplete == 0) {
+        
         if (tutorialPart == 1) {
             tutorialRequest();
         } else if (tutorialPart == 2) {

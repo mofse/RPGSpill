@@ -1,6 +1,13 @@
+README
 
-[tekniker veiledning]
-[Sett in forklaring av kode, bruk av XAMPP SQL, ] 
+I dette programmet tar du form som en eventyrer i ett RPGSpill. Dette programmet er laget av Håkon Hydle
 
-Årsoppgave manual 
+Spillet kan være utilgjengelig under server nedetid
+
+KONTAKT
+Ta gjerne kontakt med meg på epost: hahya001@osloskolen.no
+
+
+GIT
+Jeg har også en github der du kan sende tilbakemeldig eller ta kontakt github: https://github.com/mofse
 

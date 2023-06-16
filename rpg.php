@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,7 @@
             <div id="displayWindow" class="UI_box" onclick="screenClicked()">
             
                 <div id="textbox" onclick="screenClicked()">Trykk her for å starte spillet </div>
-                <div id="desctext">BigStake</div>
+                <div id="desctext"></div>
             </div>
             
             <div class="FAQimgDiv">
@@ -42,6 +42,7 @@
 
         <div class="UI" id="UI2">
             <div class="UI_box" id="UIStats">
+            <div class="ui_overskrift">Spiller</div>
                 
                 
                 <div id="hpBox" class="barBox" onclick="endreHp(20, 'hpBar')">
@@ -57,6 +58,7 @@
             <div class="UI_box" id="typebox">
             </div>
             <div class="UI_box" id="fightBox">
+            <div class="ui_overskrift">Fiende</div>
 
 
 
@@ -73,7 +75,7 @@
             </div>
             <div class="UI_box" id="inventoryBox">
                 <div class="ui_overskrift">Inventar</div>
-                <div class="inventoryItem" onmouseenter="itemDesc(basicSword)" onmouseleave="clearitemDesc(e)">basicSword</div>
+                <div class="inventoryItem" onmouseenter="itemDesc(basicSword)" onmouseleave="clearitemDesc()">basicSword</div>
             </div>
         </div>
 

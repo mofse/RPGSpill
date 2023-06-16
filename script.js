@@ -13,7 +13,7 @@ function endreHp(nyHP, hpboxNavn){
 function itemDesc(itemid) {
     document.getElementById("desctext").innerHTML = itemid.desc;
 }
-function clearitemDesc(e) {
+function clearitemDesc() {
     document.getElementById("desctext").innerHTML = "";
 }
 
